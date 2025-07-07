@@ -1,0 +1,6 @@
+{
+    "colors": "./colors.json",
+    "spacing": "./spacing.json",
+    "typography": "./typography.json",
+    "shadows": "./shadows.json"
+}

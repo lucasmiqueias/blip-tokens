@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="auto">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BLiP Design Tokens - Demo</title>
+    <link rel="stylesheet" href="src/css/index.css" />
+    <style>
+      .demo-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: var(--spacing-6);
+      }
+
+      .demo-section {
+        margin-bottom: var(--spacing-8);
+        padding: var(--spacing-4);
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--border-2);
+      }
+
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: var(--spacing-2);
+        margin: var(--spacing-4) 0;
+      }
+
+      .color-swatch {
+        height: 60px;
+        border-radius: var(--radius-md);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--font-size-xs);
+        font-weight: var(--font-weight-medium);
+        color: var(--content-bright);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      }
+
+      .spacing-demo {
+        display: flex;
+        gap: var(--spacing-2);
+        flex-wrap: wrap;
+        margin: var(--spacing-4) 0;
+      }
+
+      .spacing-box {
+        background: var(--color-primary);
+        color: var(--content-bright);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--font-size-xs);
+        border-radius: var(--radius-sm);
+      }
+
+      .theme-toggle {
+        position: fixed;
+        top: var(--spacing-4);
+        right: var(--spacing-4);
+        background: var(--surface-2);
+        border: 1px solid var(--border-1);
+        border-radius: var(--radius-md);
+        padding: var(--spacing-2) var(--spacing-3);
+        cursor: pointer;
+        font-family: var(--font-family-sans);
+        color: var(--content-default);
+      }
+
+      .button {
+        background: var(--color-primary);
+        color: var(--content-bright);
+        border: none;
+        padding: var(--spacing-2) var(--spacing-4);
+        border-radius: var(--radius-md);
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: var(--font-weight-medium);
+        transition: all 0.2s ease;
+      }
+
+      .button:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+      }
+
+      .card {
+        background: var(--surface-0);
+        border: 1px solid var(--border-2);
+        border-radius: var(--radius-lg);
+        padding: var(--spacing-4);
+        box-shadow: var(--shadow-sm);
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-toggle" onclick="toggleTheme()">
+      🌙 Alternar Tema
+    </button>
+
+    <div class="demo-container">
+      <header class="demo-section">
+        <h1 class="text-3xl font-bold text-primary">BLiP Design Tokens</h1>
+        <p class="text-content-ghost text-lg">
+          Sistema de design completo com tokens, temas e utilitários
+        </p>
+      </header>
+
+      <section class="demo-section">
+        <h2 class="text-2xl font-semibold text-content-default m-0 p-0">
+          Cores do Sistema
+        </h2>
+        <div class="color-grid">
+          <div class="color-swatch bg-primary">Primary</div>
+          <div class="color-swatch bg-secondary">Secondary</div>
+          <div class="color-swatch bg-success">Success</div>
+          <div class="color-swatch bg-warning">Warning</div>
+          <div class="color-swatch bg-error">Error</div>
+          <div class="color-swatch bg-info">Info</div>
+        </div>
+      </section>
+
+      <section class="demo-section">
+        <h2 class="text-2xl font-semibold text-content-default m-0 p-0">
+          Superfícies
+        </h2>
+        <div class="color-grid">
+          <div class="color-swatch bg-surface-0">Surface 0</div>
+          <div class="color-swatch bg-surface-1">Surface 1</div>
+          <div class="color-swatch bg-surface-2">Surface 2</div>
+          <div class="color-swatch bg-surface-3">Surface 3</div>
+        </div>
+      </section>
+
+      <section class="demo-section">
+        <h2 class="text-2xl font-semibold text-content-default m-0 p-0">
+          Espaçamento
+        </h2>
+        <div class="spacing-demo">
+          <div
+            class="spacing-box"
+            style="width: var(--spacing-2); height: var(--spacing-2)"
+          >
+            2
+          </div>
+          <div
+            class="spacing-box"
+            style="width: var(--spacing-4); height: var(--spacing-4)"
+          >
+            4
+          </div>
+          <div
+            class="spacing-box"
+            style="width: var(--spacing-6); height: var(--spacing-6)"
+          >
+            6
+          </div>
+          <div
+            class="spacing-box"
+            style="width: var(--spacing-8); height: var(--spacing-8)"
+          >
+            8
+          </div>
+          <div
+            class="spacing-box"
+            style="width: var(--spacing-10); height: var(--spacing-10)"
+          >
+            10
+          </div>
+          <div
+            class="spacing-box"
+            style="width: var(--spacing-12); height: var(--spacing-12)"
+          >
+            12
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-section">
+        <h2 class="text-2xl font-semibold text-content-default m-0 p-0">
+          Tipografia
+        </h2>
+        <div style="margin: var(--spacing-4) 0">
+          <div class="text-xs text-content-ghost">
+            Extra Small - var(--font-size-xs)
+          </div>
+          <div class="text-sm text-content-ghost">
+            Small - var(--font-size-sm)
+          </div>
+          <div class="text-base text-content-default">
+            Base - var(--font-size-base)
+          </div>
+          <div class="text-lg text-content-default">
+            Large - var(--font-size-lg)
+          </div>
+          <div class="text-xl text-content-default">
+            Extra Large - var(--font-size-xl)
+          </div>
+          <div class="text-2xl text-content-default">
+            2X Large - var(--font-size-2xl)
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-section">
+        <h2 class="text-2xl font-semibold text-content-default m-0 p-0">
+          Componentes
+        </h2>
+        <div
+          style="
+            margin: var(--spacing-4) 0;
+            display: flex;
+            gap: var(--spacing-3);
+            flex-wrap: wrap;
+          "
+        >
+          <button class="button">Botão Primário</button>
+          <button class="button bg-success">Botão Sucesso</button>
+          <button class="button bg-warning">Botão Aviso</button>
+          <button class="button bg-error">Botão Erro</button>
+        </div>
+
+        <div class="card" style="margin-top: var(--spacing-4)">
+          <h3 class="text-lg font-semibold text-content-default m-0 p-0">
+            Card Exemplo
+          </h3>
+          <p class="text-content-ghost" style="margin: var(--spacing-2) 0">
+            Este é um exemplo de card usando os tokens do sistema de design. Ele
+            usa variáveis CSS para cores, espaçamento e tipografia.
+          </p>
+          <button class="button">Ação do Card</button>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      let currentTheme = "auto";
+
+      function toggleTheme() {
+        const themes = ["light", "dark", "auto"];
+        const currentIndex = themes.indexOf(currentTheme);
+        const nextIndex = (currentIndex + 1) % themes.length;
+        currentTheme = themes[nextIndex];
+
+        document.documentElement.setAttribute("data-theme", currentTheme);
+        if (currentTheme === "auto") {
+          document.documentElement.removeAttribute("data-theme");
+          document.documentElement.setAttribute("data-theme-mode", "auto");
+        } else {
+          document.documentElement.removeAttribute("data-theme-mode");
+        }
+
+        updateThemeButton();
+      }
+
+      function updateThemeButton() {
+        const button = document.querySelector(".theme-toggle");
+        const icons = {
+          light: "☀️",
+          dark: "🌙",
+          auto: "🔄",
+        };
+        const labels = {
+          light: "Tema Claro",
+          dark: "Tema Escuro",
+          auto: "Tema Automático",
+        };
+
+        button.textContent = `${icons[currentTheme]} ${labels[currentTheme]}`;
+      }
+
+      // Initialize theme button
+      updateThemeButton();
+    </script>
+  </body>
+</html>

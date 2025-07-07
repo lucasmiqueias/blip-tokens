@@ -1,0 +1,75 @@
+{
+    "name": "@lucasmiqueias/blip-tokens",
+    "version": "1.0.0",
+    "description": "Design token system inspired by BLiP's design language",
+    "keywords": [
+        "design-system",
+        "tokens",
+        "css",
+        "theme",
+        "blip-inspired",
+        "design-tokens",
+        "personal-project"
+    ],
+    "author": "Lucas Miquéias",
+    "license": "MIT",
+    "main": "dist/index.cjs.js",
+    "module": "dist/index.esm.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist",
+        "css",
+        "tokens"
+    ],
+    "exports": {
+        ".": {
+            "import": "./dist/index.esm.js",
+            "require": "./dist/index.cjs.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./css": "./css/index.css",
+        "./css/*": "./css/*",
+        "./tokens": "./tokens/index.json",
+        "./tokens/*": "./tokens/*"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "npm run build:tokens && npm run build:css && npm run build:js",
+        "build:tokens": "node scripts/build-tokens.js",
+        "build:css": "npm run build:tokens && postcss src/css/index.css -o css/index.css",
+        "build:js": "tsc && vite build",
+        "preview": "vite preview",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "type-check": "tsc --noEmit",
+        "prepublishOnly": "npm run build"
+    },
+    "devDependencies": {
+        "@types/node": "^20.0.0",
+        "@types/react": "^18.0.0",
+        "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "@typescript-eslint/parser": "^6.0.0",
+        "autoprefixer": "^10.4.16",
+        "eslint": "^8.57.0",
+        "postcss": "^8.4.32",
+        "postcss-cli": "^11.0.0",
+        "postcss-import": "^15.1.0",
+        "react": "^18.0.0",
+        "typescript": "^5.2.2",
+        "vite": "^5.0.0"
+    },
+    "peerDependencies": {
+        "react": ">=16.8.0"
+    },
+    "peerDependenciesMeta": {
+        "react": {
+            "optional": true
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lucasmiqueias/blip-tokens.git"
+    },
+    "publishConfig": {
+        "access": "public"
+    }
+}
