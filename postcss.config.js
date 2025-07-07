@@ -1,3 +1,8 @@
 module.exports = {
-  plugins: [require("postcss-import"), require("autoprefixer")],
+  plugins: [
+    require("postcss-import")({
+      path: ["src/css"],
+    }),
+    require("autoprefixer"),
+  ],
 };
