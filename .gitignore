@@ -6,7 +6,7 @@ yarn-error.log*
 
 # Build outputs
 dist/
-css/
+/css/
 *.tgz
 
 # IDE

@@ -1,0 +1,31 @@
+/* BLiP Design System - Main Entry Point */
+
+/* Import all tokens */
+@import "./tokens.css";
+
+/* Import theme configurations */
+@import "./themes/light.css";
+@import "./themes/dark.css";
+@import "./themes/auto.css";
+
+/* Import utility classes */
+@import "./utilities.css";
+
+/* Global defaults */
+html {
+  background-color: var(--surface-1);
+  color: var(--content-default);
+}
+
+body {
+  font-family: var(--font-family-sans);
+  color: var(--content-default);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Apply font to all elements by default */
+* {
+  font-family: inherit;
+}

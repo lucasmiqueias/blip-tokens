@@ -1,0 +1,63 @@
+/* Dark Theme */
+:root[data-theme="dark"],
+.theme-dark {
+  /* Primary Theme Tokens */
+  --color-primary: var(--color-dark-primary);
+  --color-secondary: var(--color-dark-secondary);
+
+  /* Surface Tokens */
+  --surface-0: var(--color-dark-surface-0);
+  --surface-1: var(--color-dark-surface-1);
+  --surface-2: var(--color-dark-surface-2);
+  --surface-3: var(--color-dark-surface-3);
+  --surface-4: var(--color-dark-surface-4);
+  --surface-positive: var(--color-dark-surface-positive);
+  --surface-negative: var(--color-dark-surface-negative);
+  --surface-primary: var(--color-dark-surface-primary);
+
+  /* Content Tokens */
+  --content-default: var(--color-dark-content-default);
+  --content-disable: var(--color-dark-content-disable);
+  --content-ghost: var(--color-dark-content-ghost);
+  --content-bright: var(--color-dark-content-bright);
+  --content-din: var(--color-dark-content-din);
+  --content-muted: var(--color-dark-content-ghost);
+
+  /* Border Tokens */
+  --border-1: var(--color-dark-border-1);
+  --border-2: var(--color-dark-border-2);
+  --border-3: var(--color-dark-border-3);
+
+  /* Semantic Status Tokens */
+  --color-positive: var(--color-dark-positive);
+  --color-negative: var(--color-dark-negative);
+  --color-info: var(--color-dark-info);
+  --color-system: var(--color-dark-system);
+  --color-focus: var(--color-dark-focus);
+  --color-success: var(--color-dark-success);
+  --color-warning: var(--color-dark-warning);
+  --color-error: var(--color-dark-error);
+  --color-delete: var(--color-dark-delete);
+
+  /* Extended Color Tokens */
+  --color-blue: var(--color-dark-extended-blue);
+  --color-blue-bright: var(--color-dark-extended-blue-bright);
+  --color-ocean: var(--color-dark-extended-ocean);
+  --color-ocean-bright: var(--color-dark-extended-ocean-bright);
+  --color-green: var(--color-dark-extended-green);
+  --color-green-bright: var(--color-dark-extended-green-bright);
+  --color-yellow: var(--color-dark-extended-yellow);
+  --color-yellow-bright: var(--color-dark-extended-yellow-bright);
+  --color-orange: var(--color-dark-extended-orange);
+  --color-orange-bright: var(--color-dark-extended-orange-bright);
+  --color-red: var(--color-dark-extended-red);
+  --color-red-bright: var(--color-dark-extended-red-bright);
+  --color-pink: var(--color-dark-extended-pink);
+  --color-pink-bright: var(--color-dark-extended-pink-bright);
+  --color-gray: var(--color-dark-extended-gray);
+  --color-gray-bright: var(--color-dark-extended-gray-bright);
+
+  /* Action Tokens */
+  --action-hover: var(--color-dark-hover);
+  --action-pressed: var(--color-dark-pressed);
+}

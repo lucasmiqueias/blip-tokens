@@ -1,0 +1,398 @@
+/* BLiP Design System - Utility Classes */
+
+/* Background Utilities */
+.bg-surface-0 {
+  background-color: var(--surface-0);
+}
+.bg-surface-1 {
+  background-color: var(--surface-1);
+}
+.bg-surface-2 {
+  background-color: var(--surface-2);
+}
+.bg-surface-3 {
+  background-color: var(--surface-3);
+}
+.bg-surface-4 {
+  background-color: var(--surface-4);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-brand {
+  background-color: var(--color-brand);
+}
+
+/* Status Background Colors */
+.bg-success {
+  background-color: var(--color-success);
+}
+.bg-warning {
+  background-color: var(--color-warning);
+}
+.bg-error {
+  background-color: var(--color-error);
+}
+.bg-info {
+  background-color: var(--color-info);
+}
+.bg-positive {
+  background-color: var(--color-positive);
+}
+.bg-negative {
+  background-color: var(--color-negative);
+}
+
+/* Text Color Utilities */
+.text-content-default {
+  color: var(--content-default);
+}
+.text-content-ghost {
+  color: var(--content-ghost);
+}
+.text-content-bright {
+  color: var(--content-bright);
+}
+.text-content-disable {
+  color: var(--content-disable);
+}
+.text-content-muted {
+  color: var(--content-muted);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.text-secondary {
+  color: var(--color-secondary);
+}
+.text-brand {
+  color: var(--color-brand);
+}
+
+/* Status Text Colors */
+.text-success {
+  color: var(--color-success);
+}
+.text-warning {
+  color: var(--color-warning);
+}
+.text-error {
+  color: var(--color-error);
+}
+.text-info {
+  color: var(--color-info);
+}
+.text-positive {
+  color: var(--color-positive);
+}
+.text-negative {
+  color: var(--color-negative);
+}
+
+/* Border Utilities */
+.border-0 {
+  border: none;
+}
+.border-1 {
+  border: 1px solid var(--border-1);
+}
+.border-2 {
+  border: 1px solid var(--border-2);
+}
+.border-3 {
+  border: 1px solid var(--border-3);
+}
+.border-primary {
+  border-color: var(--color-primary);
+}
+.border-success {
+  border-color: var(--color-success);
+}
+.border-warning {
+  border-color: var(--color-warning);
+}
+.border-error {
+  border-color: var(--color-error);
+}
+
+/* Spacing Utilities */
+.p-0 {
+  padding: var(--spacing-0);
+}
+.p-1 {
+  padding: var(--spacing-1);
+}
+.p-2 {
+  padding: var(--spacing-2);
+}
+.p-3 {
+  padding: var(--spacing-3);
+}
+.p-4 {
+  padding: var(--spacing-4);
+}
+.p-5 {
+  padding: var(--spacing-5);
+}
+.p-6 {
+  padding: var(--spacing-6);
+}
+.p-8 {
+  padding: var(--spacing-8);
+}
+.p-10 {
+  padding: var(--spacing-10);
+}
+.p-12 {
+  padding: var(--spacing-12);
+}
+
+.m-0 {
+  margin: var(--spacing-0);
+}
+.m-1 {
+  margin: var(--spacing-1);
+}
+.m-2 {
+  margin: var(--spacing-2);
+}
+.m-3 {
+  margin: var(--spacing-3);
+}
+.m-4 {
+  margin: var(--spacing-4);
+}
+.m-5 {
+  margin: var(--spacing-5);
+}
+.m-6 {
+  margin: var(--spacing-6);
+}
+.m-8 {
+  margin: var(--spacing-8);
+}
+.m-10 {
+  margin: var(--spacing-10);
+}
+.m-12 {
+  margin: var(--spacing-12);
+}
+
+/* Border Radius Utilities */
+.rounded-none {
+  border-radius: var(--radius-none);
+}
+.rounded-sm {
+  border-radius: var(--radius-sm);
+}
+.rounded {
+  border-radius: var(--radius-base);
+}
+.rounded-md {
+  border-radius: var(--radius-md);
+}
+.rounded-lg {
+  border-radius: var(--radius-lg);
+}
+.rounded-xl {
+  border-radius: var(--radius-xl);
+}
+.rounded-2xl {
+  border-radius: var(--radius-2xl);
+}
+.rounded-3xl {
+  border-radius: var(--radius-3xl);
+}
+.rounded-full {
+  border-radius: var(--radius-full);
+}
+
+/* Typography Utilities */
+.text-xs {
+  font-size: var(--font-size-xs);
+}
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+.text-base {
+  font-size: var(--font-size-base);
+}
+.text-lg {
+  font-size: var(--font-size-lg);
+}
+.text-xl {
+  font-size: var(--font-size-xl);
+}
+.text-2xl {
+  font-size: var(--font-size-2xl);
+}
+.text-3xl {
+  font-size: var(--font-size-3xl);
+}
+.text-4xl {
+  font-size: var(--font-size-4xl);
+}
+.text-5xl {
+  font-size: var(--font-size-5xl);
+}
+
+.font-thin {
+  font-weight: var(--font-weight-thin);
+}
+.font-light {
+  font-weight: var(--font-weight-light);
+}
+.font-normal {
+  font-weight: var(--font-weight-normal);
+}
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+.font-extrabold {
+  font-weight: var(--font-weight-extrabold);
+}
+
+.font-sans {
+  font-family: var(--font-family-sans);
+}
+.font-serif {
+  font-family: var(--font-family-serif);
+}
+.font-mono {
+  font-family: var(--font-family-mono);
+}
+
+/* Shadow Utilities */
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+.shadow-xl {
+  box-shadow: var(--shadow-xl);
+}
+.shadow-2xl {
+  box-shadow: var(--shadow-2xl);
+}
+.shadow-inner {
+  box-shadow: var(--shadow-inner);
+}
+.shadow-none {
+  box-shadow: var(--shadow-none);
+}
+
+/* Interactive Utilities */
+.interactive {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.interactive:hover {
+  background-color: var(--action-hover);
+}
+
+.interactive:active {
+  background-color: var(--action-pressed);
+}
+
+/* Size Utilities */
+.w-0 {
+  width: var(--size-0);
+}
+.w-1 {
+  width: var(--size-1);
+}
+.w-2 {
+  width: var(--size-2);
+}
+.w-3 {
+  width: var(--size-3);
+}
+.w-4 {
+  width: var(--size-4);
+}
+.w-5 {
+  width: var(--size-5);
+}
+.w-6 {
+  width: var(--size-6);
+}
+.w-8 {
+  width: var(--size-8);
+}
+.w-10 {
+  width: var(--size-10);
+}
+.w-12 {
+  width: var(--size-12);
+}
+
+.h-0 {
+  height: var(--size-0);
+}
+.h-1 {
+  height: var(--size-1);
+}
+.h-2 {
+  height: var(--size-2);
+}
+.h-3 {
+  height: var(--size-3);
+}
+.h-4 {
+  height: var(--size-4);
+}
+.h-5 {
+  height: var(--size-5);
+}
+.h-6 {
+  height: var(--size-6);
+}
+.h-8 {
+  height: var(--size-8);
+}
+.h-10 {
+  height: var(--size-10);
+}
+.h-12 {
+  height: var(--size-12);
+}
+
+/* Icon Utilities */
+.icon-xs {
+  width: var(--icon-xs);
+  height: var(--icon-xs);
+}
+.icon-sm {
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+}
+.icon-md {
+  width: var(--icon-md);
+  height: var(--icon-md);
+}
+.icon-lg {
+  width: var(--icon-lg);
+  height: var(--icon-lg);
+}
+.icon-xl {
+  width: var(--icon-xl);
+  height: var(--icon-xl);
+}
+.icon-2xl {
+  width: var(--icon-2xl);
+  height: var(--icon-2xl);
+}

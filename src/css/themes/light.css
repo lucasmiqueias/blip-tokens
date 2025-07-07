@@ -1,0 +1,64 @@
+/* Light Theme - Default Theme */
+:root,
+:root[data-theme="light"],
+.theme-light {
+  /* Primary Theme Tokens */
+  --color-primary: var(--color-light-primary);
+  --color-secondary: var(--color-light-secondary);
+
+  /* Surface Tokens */
+  --surface-0: var(--color-light-surface-0);
+  --surface-1: var(--color-light-surface-1);
+  --surface-2: var(--color-light-surface-2);
+  --surface-3: var(--color-light-surface-3);
+  --surface-4: var(--color-light-surface-4);
+  --surface-positive: var(--color-light-surface-positive);
+  --surface-negative: var(--color-light-surface-negative);
+  --surface-primary: var(--color-light-surface-primary);
+
+  /* Content Tokens */
+  --content-default: var(--color-light-content-default);
+  --content-disable: var(--color-light-content-disable);
+  --content-ghost: var(--color-light-content-ghost);
+  --content-bright: var(--color-light-content-bright);
+  --content-din: var(--color-light-content-din);
+  --content-muted: var(--color-light-content-ghost);
+
+  /* Border Tokens */
+  --border-1: var(--color-light-border-1);
+  --border-2: var(--color-light-border-2);
+  --border-3: var(--color-light-border-3);
+
+  /* Semantic Status Tokens */
+  --color-positive: var(--color-light-positive);
+  --color-negative: var(--color-light-negative);
+  --color-info: var(--color-light-info);
+  --color-system: var(--color-light-system);
+  --color-focus: var(--color-light-focus);
+  --color-success: var(--color-light-success);
+  --color-warning: var(--color-light-warning);
+  --color-error: var(--color-light-error);
+  --color-delete: var(--color-light-delete);
+
+  /* Extended Color Tokens */
+  --color-blue: var(--color-light-extended-blue);
+  --color-blue-bright: var(--color-light-extended-blue-bright);
+  --color-ocean: var(--color-light-extended-ocean);
+  --color-ocean-bright: var(--color-light-extended-ocean-bright);
+  --color-green: var(--color-light-extended-green);
+  --color-green-bright: var(--color-light-extended-green-bright);
+  --color-yellow: var(--color-light-extended-yellow);
+  --color-yellow-bright: var(--color-light-extended-yellow-bright);
+  --color-orange: var(--color-light-extended-orange);
+  --color-orange-bright: var(--color-light-extended-orange-bright);
+  --color-red: var(--color-light-extended-red);
+  --color-red-bright: var(--color-light-extended-red-bright);
+  --color-pink: var(--color-light-extended-pink);
+  --color-pink-bright: var(--color-light-extended-pink-bright);
+  --color-gray: var(--color-light-extended-gray);
+  --color-gray-bright: var(--color-light-extended-gray-bright);
+
+  /* Action Tokens */
+  --action-hover: var(--color-light-hover);
+  --action-pressed: var(--color-light-pressed);
+}
