@@ -1,6 +1,6 @@
 {
     "name": "@lucasmiqueias/blip-tokens",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Design token system inspired by BLiP's design language",
     "keywords": [
         "design-system",
@@ -27,6 +27,8 @@
             "require": "./dist/index.cjs.js",
             "types": "./dist/index.d.ts"
         },
+        "./dist": "./dist/index.esm.js",
+        "./dist/*": "./dist/*",
         "./css": "./css/index.css",
         "./css/*": "./css/*",
         "./tokens": "./tokens/index.json",
