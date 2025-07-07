@@ -31,18 +31,21 @@ Este é um sistema de design tokens inspirado na linguagem visual da BLiP, imple
 ## Padrões de Código
 
 ### Naming Conventions
+
 - **Tokens JSON**: Use snake_case para propriedades (`primary_500`, `text_primary`)
 - **CSS Variables**: Prefixe com `--blip-` (`--blip-color-primary`, `--blip-spacing-md`)
 - **TypeScript**: Use camelCase para funções e PascalCase para tipos/interfaces
 - **CSS Classes**: Use BEM methodology (`.blip-button`, `.blip-button--primary`)
 
 ### Token Structure
+
 - **Cores**: Organizadas em escalas de 50-900 (ex: `blue_500`)
 - **Espaçamento**: Sistema baseado em rem (xs, sm, md, lg, xl, 2xl, etc.)
 - **Tipografia**: Sizes (xs-4xl) com line-height e font-weight correspondentes
 - **Sombras**: Níveis de elevação (sm, md, lg, xl, 2xl)
 
 ### Theme Management
+
 - Temas suportados: `light`, `dark`, `auto`
 - Use `ThemeManager` class para controle programático
 - Hook `useTheme()` para React applications
@@ -51,23 +54,27 @@ Este é um sistema de design tokens inspirado na linguagem visual da BLiP, imple
 ## Diretrizes de Desenvolvimento
 
 ### Quando adicionar novos tokens:
+
 1. Adicione ao arquivo JSON apropriado em `/tokens/`
 2. Execute `npm run build:tokens` para regenerar CSS
 3. Atualize tipos TypeScript se necessário
 4. Documente no README se for uma mudança breaking
 
 ### CSS Generation:
+
 - CSS é gerado automaticamente via `scripts/build-tokens.js`
 - Não edite arquivos CSS diretamente - eles são overwritten no build
 - Use PostCSS para processamento adicional
 
 ### TypeScript:
+
 - Mantenha tipagem estrita habilitada
 - Exporte todos os tokens com tipos apropriados
 - Use generics para flexibilidade quando apropriado
 - Prefira `const assertions` para objetos de tokens
 
 ### Testing:
+
 - Teste theme switching em múltiplos browsers
 - Valide que CSS variables são aplicadas corretamente
 - Teste SSR compatibility para React applications
@@ -81,6 +88,7 @@ O projeto usa um processo de build em múltiplas etapas:
 3. **build:js** - Compila TypeScript e cria bundles UMD/ESM
 
 ### Scripts Importantes:
+
 - `npm run dev` - Desenvolvimento com Vite
 - `npm run build` - Build completo para produção
 - `npm run build:tokens` - Apenas regenera CSS dos tokens
@@ -90,11 +98,13 @@ O projeto usa um processo de build em múltiplas etapas:
 ## Exports & Usage Patterns
 
 ### Package Exports:
+
 - **Main**: `@lucasmiqueias/blip-tokens` (JS/TS utilities)
 - **CSS**: `@lucasmiqueias/blip-tokens/css` (all CSS)
 - **Tokens**: `@lucasmiqueias/blip-tokens/tokens` (JSON tokens)
 
 ### Common Patterns:
+
 ```typescript
 // Theme management
 import { themeManager, useTheme } from '@lucasmiqueias/blip-tokens';
