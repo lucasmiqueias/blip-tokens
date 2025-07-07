@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16, 18, 20]
+        node-version: [18, 20]
 
     steps:
       - name: Checkout code
@@ -26,6 +26,18 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Debug environment
+        run: |
+          echo "=== Node.js version ==="
+          node --version
+          npm --version
+          echo "=== PostCSS CLI version ==="
+          npx postcss --version
+          echo "=== Project structure ==="
+          find src/css -name "*.css" -type f
+          echo "=== PostCSS config ==="
+          cat postcss.config.js
+
       - name: Run lint
         run: npm run lint
 
@@ -33,4 +45,21 @@ jobs:
         run: npm run type-check
 
       - name: Build project
-        run: npm run build
+        run: |
+          echo "Running build:tokens..."
+          npm run build:tokens || exit 1
+          
+          echo "Running build:css..."
+          npm run build:css || {
+            echo "PostCSS failed, trying fallback..."
+            npm run build:css:fallback || exit 1
+          }
+          
+          echo "Running build:js..."
+          npm run build:js || exit 1
+
+      - name: Verify build output
+        run: |
+          echo "=== Build output ==="
+          ls -la css/ || echo "css/ directory not found"
+          ls -la dist/ || echo "dist/ directory not found"

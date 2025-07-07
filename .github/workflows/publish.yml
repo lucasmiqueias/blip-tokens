@@ -39,13 +39,13 @@ jobs:
         run: |
           echo "Running build:tokens..."
           npm run build:tokens || exit 1
-          
+
           echo "Running build:css..."
           npm run build:css || {
             echo "PostCSS failed, trying fallback..."
             npm run build:css:fallback || exit 1
           }
-          
+
           echo "Running build:js..."
           npm run build:js || exit 1
 
