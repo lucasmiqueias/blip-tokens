@@ -55,11 +55,21 @@ jobs:
           ls -la css/
           ls -la dist/
 
+      - run: npm publish --provenance --access public
+
       - name: Check NPM authentication
         run: |
           echo "Checking NPM authentication..."
-          npm whoami || echo "NPM authentication failed"
           echo "Registry: $(npm config get registry)"
+          echo "Auth token present: $([[ -n "$NODE_AUTH_TOKEN" ]] && echo "YES" || echo "NO")"
+          npm whoami || echo "NPM authentication failed"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Test publish (dry run)
+        run: npm publish --dry-run
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish to NPM
         run: npm publish
