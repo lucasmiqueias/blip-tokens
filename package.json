@@ -39,7 +39,7 @@
         "build:css": "npm run build:tokens && postcss src/css/index.css -o css/index.css",
         "build:js": "tsc && vite build",
         "preview": "vite preview",
-        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "type-check": "tsc --noEmit",
         "prepublishOnly": "npm run build"
     },
