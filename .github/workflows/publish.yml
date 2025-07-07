@@ -55,6 +55,12 @@ jobs:
           ls -la css/
           ls -la dist/
 
+      - name: Check NPM authentication
+        run: |
+          echo "Checking NPM authentication..."
+          npm whoami || echo "NPM authentication failed"
+          echo "Registry: $(npm config get registry)"
+
       - name: Publish to NPM
         run: npm publish
         env:
